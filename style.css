@@ -1,0 +1,88 @@
+:root {
+	font-size: 62.5%;
+	--box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+		rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+	--border: 1px solid rgb(226, 226, 226);
+	--green: rgba(0, 206, 0, 0.5);
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: "Open Sans", sans-serif;
+	font-size: 1.6rem;
+}
+header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	background: var(--green);
+}
+header p {
+	text-align: center;
+	padding: 1.6em 0;
+}
+a {
+	color: black;
+}
+main {
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.container {
+	max-width: 45rem;
+	flex-grow: 1;
+}
+section {
+	grid-template-columns: 1fr 1fr 1fr;
+	box-shadow: var(--box-shadow);
+}
+.player-indicator {
+	display: flex;
+	justify-content: space-between;
+	border: var(--border);
+	font-size: 2.4rem;
+	padding: 0.5em 1em;
+}
+.player-indicator img {
+	width: 2.4rem;
+	height: auto;
+}
+.game-grid {
+	margin-top: 2em;
+	display: grid;
+}
+
+.grid-square {
+	padding-top: 100%;
+	position: relative;
+	border: var(--border);
+}
+
+.content {
+	cursor: pointer;
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	padding: 1em;
+}
+
+.hide {
+	display: none;
+}
+
+.chosen-square {
+	pointer-events: none;
+}
+.highlight {
+	background: var(--green);
+}
