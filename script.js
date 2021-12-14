@@ -3,13 +3,11 @@ const headerParagraph = document.querySelector("header p");
 const playerIndicators = document.querySelectorAll(".player-indicator");
 
 let roundsLeft = 9;
-
 const players = {
 	cross: new Array(9),
 	circle: new Array(9),
 };
 let currentPlayer = "cross";
-
 const winCombos = [
 	[0, 1, 2],
 	[3, 4, 5],
@@ -40,14 +38,6 @@ function gameOver() {
 }
 
 function playerHasWon() {
-	// winCombos.forEach((winCombo) => {
-	// 	let sum = 0;
-	// 	winCombo.forEach((i) => (sum += players[currentPlayer][i]));
-	// 	if (sum === 3) {
-	// 		console.log("Går in i if-satsen");
-	// 		return true;
-	// 	}
-	// });
 	for (const winCombo of winCombos) {
 		let sum = 0;
 		for (const i of winCombo) {
