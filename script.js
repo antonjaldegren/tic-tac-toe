@@ -53,7 +53,8 @@ function playerHasWon() {
 squares.forEach((square) => {
 	const chosenSquareImg = document.querySelector(`#${square.id} img`);
 	square.addEventListener("click", () => {
-		chosenSquareImg.setAttribute("src", `./${currentPlayer}.svg`);
+		chosenSquareImg.setAttribute("src", `./assets/${currentPlayer}.svg`);
+		chosenSquareImg.setAttribute("alt", `${currentPlayer}`);
 		square.classList.add("chosen-square");
 		players[currentPlayer][square.id.substring(6)] = 1;
 		roundsLeft--;
